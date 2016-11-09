@@ -1,0 +1,45 @@
+{
+  "name": "AwesomeMailClient",
+  "version": "0.0.1",
+  "description": "A React/Redux based mail client UI using a TDD approach on testing React components using Enzyme.",
+  "scripts": {
+    "test": "mocha setup.js tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:khizar/AwsomeMailClient.git"
+  },
+  "author": {
+    "name": "khizar",
+    "email": "khizar.aziz@gmail.com"
+  },
+  "homepage": "https://github.com/khizar",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.3.0",
+    "jsdom": "^9.3.0",
+    "mocha": "^2.5.3",
+    "react-addons-test-utils": "^15.0.2",
+    "sinon": "^1.17.4"
+  },
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.7.0",
+    "react-router-redux": "^4.0.5",
+    "redux": "^3.5.2",
+    "redux-immutable": "^3.0.8"
+  },
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "khizar",
+      "email": "khizar.aziz@gmail.com"
+    }
+  ]
+}
