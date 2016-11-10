@@ -41,7 +41,7 @@ loaders.push({
 module.exports = {
 	entry: [
 		'react-hot-loader/patch',
-		'./src/main.jsx' // your app's entry point
+		'./src/main.jsx' // your App's entry point
 	],
 	devtool: process.env.WEBPACK_DEVTOOL || 'cheap-module-source-map',
 	output: {
