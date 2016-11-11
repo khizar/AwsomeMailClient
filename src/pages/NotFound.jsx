@@ -3,7 +3,7 @@ import { browserHistory } from 'react-router';
 
 export default class NotFound extends React.Component {
     componentWillMount() {
-        browserHistory.push('/');
+        browserHistory.push('/'); //returning to the main page
     }
 
     render() {

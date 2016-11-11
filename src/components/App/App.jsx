@@ -3,13 +3,18 @@ import styles from '../../../styles/index.scss';
 import React from 'react';
 
 export default class App extends React.Component {
+    static propTypes = {
+      children: React.PropTypes.object
+    };
+
     render() {
         return (
-            <div>
-                <h1>It Works!</h1>
+            <div className="align-middle">
+                <h1>Awesome Mail Client</h1>
                 <p>This React project just works including <span className={styles.redBg}>module</span> local styles.</p>
                 <p>Global bootstrap css import works too as you can see on the following button.</p>
-                <p><a href="/" className="btn btn-primary btn-lg">Enjoy!</a></p>
+
+                {this.props.children}
             </div>
         )
     }
