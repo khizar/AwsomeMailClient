@@ -6,9 +6,10 @@ const initialState = fromJS({
 });
 
 const MailClientReducer = (state = initialState, action) => {
+
     switch (action.type) {
         case 'CLICK_EVENT':
-            return state.set(state.globalClickCount, state.globalClickCount++);
+            return state.set('globalClickCount', state.get('globalClickCount') + 1);
         default:
             return state;
     }
