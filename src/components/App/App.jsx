@@ -1,11 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '../../../styles/index.scss';
 import React from 'react';
 
+require('../../../styles/index.scss');
+
 const App = props => (
-    <div className="align-middle" onClick={props.onGlobalClick}>
+    <div className="awesome-email-client" onClick={props.onGlobalClick}>
         <h1>Awesome Mail Client</h1>
-        <p>This React project just works including <span className={styles.redBg}>module</span> local styles.</p>
+        <p>This React project just works including <span className="redBg">module</span> local styles.</p>
         <p>Global bootstrap css import works too as you can see on the following button.</p>
 
         {props.children}
