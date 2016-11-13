@@ -1,11 +1,13 @@
 import React from 'react';
 import { it, describe, beforeEach } from 'mocha';
 import { expect } from 'chai';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import App from '../../../src/components/App/App';
+import MailMessage from '../../../src/components/MailMessage/MailMessage';
+import MailNavigationPanel from '../../../src/components/MailNavigationPanel/MailNavigationPanel';
 import sinon from 'sinon';
 
-describe('App component', function () {
+describe('App component', () => {
     let wrapper;
 
     beforeEach(() => {
@@ -16,19 +18,19 @@ describe('App component', function () {
         expect([1, 2, 3].indexOf(4)).to.equal(-1);
     });
 
-    it('App wrapper component should exist', () => {
+    it('should exist', () => {
         expect(wrapper).to.exist;
     });
 
-    it('App wrapper should be a div', () => {
+    it('should be a div', () => {
         expect(wrapper.type()).to.equal('div');
     });
 
-    it('App wrapper should have the correct class', () => {
+    it('should have the correct class', () => {
         expect(wrapper.hasClass('awesome-email-client')).to.equal(true);
     });
 
-    it('App wrapper should have the first three correct children', () => {
+    it('should have the first three correct children', () => {
         let firstChild = wrapper.childAt(0);
         let secondChild = wrapper.childAt(1);
         let thirdChild = wrapper.childAt(2);
@@ -45,4 +47,11 @@ describe('App component', function () {
         expect(spy.calledOnce).to.equal(true);
     });
 
+    it('should have a mail navigation panel', () => {
+       expect(wrapper.find(MailNavigationPanel)).to.have.length(1);
+    });
+
+    it('should have a mail message panel', () => {
+        expect(wrapper.find(MailMessage)).to.have.length(1);
+    });
 });

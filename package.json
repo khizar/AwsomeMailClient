@@ -10,8 +10,8 @@
   "scripts": {
     "build": "webpack --config webpack.production.config.js --progress --profile --colors",
     "start": "webpack-dev-server --progress --profile --colors  --display-error-details",
-    "test": "mocha --require ignore-styles test/setup.js \"test/**/*.js\"",
-    "test:watch": "mocha --watch --require ignore-styles test/setup.js \"test/**/*.js\""
+    "test": "mocha --require ignore-styles test/setup.js \"test/**/*.spec.js\"",
+    "test:watch": "mocha --watch --require ignore-styles test/setup.js \"test/**/*.spec.js\""
   },
   "repository": {
     "type": "git",

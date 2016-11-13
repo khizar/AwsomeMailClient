@@ -1,14 +1,22 @@
 import React from 'react';
+import MailNavigationPanel from '../MailNavigationPanel/MailNavigationPanel';
+import MailMessage from '../MailMessage/MailMessage';
 
 require('../../../styles/index.scss');
 
 const App = props => (
     <div className="awesome-email-client" onClick={props.onGlobalClick}>
+
+
         <h1>Awesome Mail Client</h1>
         <p>This React project just works including <span className="redBg">module</span> local styles.</p>
         <p>Global bootstrap css import works too as you can see on the following button.</p>
 
         {props.children}
+
+        <MailNavigationPanel/>
+        <MailMessage/>
+
     </div>
 );
 
