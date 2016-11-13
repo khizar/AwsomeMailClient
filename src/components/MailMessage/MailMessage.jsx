@@ -2,12 +2,12 @@ import React from 'react';
 
 const MailMessage = (props) => (
     <div className="message-container">
-        <p className="email-text"> {props.emailText}</p>
+        <p className="email-text"> {props.email ? props.email.message: ''}</p>
     </div>
 );
 
 MailMessage.propTypes = {
-    emailText: React.PropTypes.string
+    email: React.PropTypes.object
 };
 
 export default MailMessage;

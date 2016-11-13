@@ -22,7 +22,7 @@ describe('MailItemList', () => {
     }];
 
     beforeEach(() => {
-        mailItemList = shallow(<MailItemList mailItems={mailItemsArr}/>);
+        mailItemList = shallow(<MailItemList mailItemsList={mailItemsArr}/>);
     });
 
     it('should render', () => {
@@ -32,8 +32,7 @@ describe('MailItemList', () => {
     });
 
     it('should render list items equal to the number of mail items in the array', () => {
-        expect(mailItemList.find('ul').children().length).to.equal(mailItemsArr.length);
+        expect(mailItemList.children('li')).to.have.length(mailItemsArr.length);
     });
-
 
 });

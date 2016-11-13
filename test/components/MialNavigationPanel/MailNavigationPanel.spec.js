@@ -19,7 +19,6 @@ describe('MailNavigationPanel' , () => {
     });
 
     it('should have a single mail items list component', () => {
-
        expect(mailNavigationComponent.find(MailItemList)).to.have.length(1);
     });
 

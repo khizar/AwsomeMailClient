@@ -1,15 +1,20 @@
 import React from 'react';
-import MailItem from '../MailItem/MailItem'
+import MailItemContainer from '../MailItem/MailItemContainer';
 
 const MailItemList = (props) => (
     <ul>
-        {(props.mailItems) && props.mailItems.map(mailItem =>
-            <li key={props.mailItems.uid}><MailItem mailItem={mailItem}/></li>
+        {props.mailItemsList.map(mailItem =>
+            <li key={mailItem.uid}>
+                <MailItemContainer mailItem={mailItem}/>
+            </li>
         )}
     </ul>
 );
 
 MailItemList.propTypes = {
-    mailItems: React.PropTypes.array
+    mailItemsList: React.PropTypes.oneOfType([
+        React.PropTypes.object,
+        React.PropTypes.array
+    ])
 };
 export default MailItemList;

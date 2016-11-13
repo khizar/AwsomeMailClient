@@ -11,8 +11,6 @@ const store = createStore(MailClientReducer, applyMiddleware(logger));
 
 
 ReactDom.render(
-    // Provider connects our component tree to a Redux store.
-    // Provider has to be ancestor to all of our application components.
     <Provider store={store}>
         <Router history={hashHistory} routes={routes}/>
     </Provider>,

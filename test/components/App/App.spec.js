@@ -3,7 +3,7 @@ import { it, describe, beforeEach } from 'mocha';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import App from '../../../src/components/App/App';
-import MailMessage from '../../../src/components/MailMessage/MailMessage';
+import MailMessagePanel from '../../../src/components/MailMessagePanel/MailMessagePanel';
 import MailNavigationPanel from '../../../src/components/MailNavigationPanel/MailNavigationPanel';
 import sinon from 'sinon';
 
@@ -52,6 +52,6 @@ describe('App component', () => {
     });
 
     it('should have a mail message panel', () => {
-        expect(wrapper.find(MailMessage)).to.have.length(1);
+        expect(wrapper.find(MailMessagePanel)).to.have.length(1);
     });
 });
