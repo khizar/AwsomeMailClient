@@ -16,6 +16,10 @@ Got a technical task from a company to make a mail client, very simple one. Deci
 - Sinon
 
 ### To run
+Requirements:
+- Node v 6.x.x
+- npm 
+
 Clone the repository and then do.
 - npm install
 - npm start
