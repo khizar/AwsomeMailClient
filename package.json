@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "webpack-dev-server --progress --profile --colors  --display-error-details",
-    "test": "mocha --require ignore-styles test/setup.js \"test/**/*.spec.js\"",
-    "test:watch": "mocha --watch --require ignore-styles test/setup.js \"test/**/*.spec.js\"",
-    "cover": "istanbul cover mocha -- --compilers js:babel/register"
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "coverage": "nyc mocha "
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/khizar",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-cli": "^6.18.0",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.7",
     "babel-plugin-transform-class-properties": "^6.16.0",
@@ -28,6 +29,7 @@
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "6.16.0",
     "babel-preset-react": "6.16.0",
+    "babel-register": "^6.18.0",
     "babel-runtime": "^6.11.6",
     "chai": "^3.5.0",
     "css-loader": "0.25.0",
@@ -36,9 +38,12 @@
     "file-loader": "0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "ignore-styles": "^5.0.1",
+    "istanbul": "^0.4.5",
     "jsdom": "^9.8.3",
+    "jsdom-global": "^2.1.0",
     "json-loader": "^0.5.4",
     "mocha": "^3.1.2",
+    "nyc": "^8.4.0",
     "react-addons-test-utils": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "sinon": "^1.17.6",

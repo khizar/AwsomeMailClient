@@ -22,4 +22,4 @@ global.navigator = {
 };
 
 
-documentRef = document;
+//documentRef = document;
