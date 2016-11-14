@@ -21,8 +21,8 @@ describe('MailMessage' , () => {
         expect(mailMessageComponent.find('div.message-container')).to.have.length(1);
     });
 
-    it('should contain a paragraph with email text', () => {
-       expect(mailMessageComponent.find('p.email-text')).to.have.length(1);
+    it('should contain an with email text', () => {
+       expect(mailMessageComponent.find('.email-text')).to.have.length(1);
     });
 
 });

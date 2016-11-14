@@ -8,10 +8,10 @@
     "npm": ">=3.8"
   },
   "scripts": {
-    "build": "webpack --config webpack.production.config.js --progress --profile --colors",
     "start": "webpack-dev-server --progress --profile --colors  --display-error-details",
     "test": "mocha --require ignore-styles test/setup.js \"test/**/*.spec.js\"",
-    "test:watch": "mocha --watch --require ignore-styles test/setup.js \"test/**/*.spec.js\""
+    "test:watch": "mocha --watch --require ignore-styles test/setup.js \"test/**/*.spec.js\"",
+    "cover": "istanbul cover mocha -- --compilers js:babel/register"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "author": "khizar <khizar.aziz@gmail.com>",
   "homepage": "https://github.com/khizar",
   "devDependencies": {
+    "autoprefixer": "^6.5.3",
     "babel-core": "6.17.0",
     "babel-loader": "6.2.7",
     "babel-plugin-transform-class-properties": "^6.16.0",
@@ -38,7 +39,6 @@
     "jsdom": "^9.8.3",
     "json-loader": "^0.5.4",
     "mocha": "^3.1.2",
-    "postcss-loader": "^1.0.0",
     "react-addons-test-utils": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
     "sinon": "^1.17.6",
@@ -50,12 +50,14 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.3",
+    "classnames": "^2.2.5",
     "immutable": "^3.8.1",
     "json-loader": "^0.5.4",
     "moment": "^2.16.0",
     "node-sass": "^3.10.1",
     "react": "15.3.2",
     "react-dom": "15.3.2",
+    "react-native-listener": "^1.0.1",
     "react-redux": "^4.4.5",
     "react-router": "^3.0.0",
     "react-router-redux": "^4.0.7",

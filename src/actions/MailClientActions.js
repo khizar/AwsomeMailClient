@@ -1,6 +1,7 @@
 export const GLOBAL_CLICK_EVENT = 'GLOBAL_CLICK_EVENT';
 export const FETCH_EMAILS = 'FETCH_EMAILS';
 export const SELECT_EMAIL = 'SELECT_EMAIL';
+export const DELETE_EMAIL = 'DELETE_EMAIL';
 
 export function globalClick() {
     return {
@@ -20,3 +21,9 @@ export function fetchEmails(emails) {
          email
      }
  }
+export function deleteEmail(emailId) {
+    return {
+        type: DELETE_EMAIL,
+        emailId
+    }
+}

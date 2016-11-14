@@ -15,12 +15,11 @@ class App extends React.Component {
         return (
             <div className="awesome-email-client" onClick={this.props.onGlobalClick}>
 
-                <h1>Awesome Mail Client</h1>
-                <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-                <p>Global bootstrap css import works too as you can see on the following button.</p>
-
-                <MailNavigationPanel emails={this.props.emailMessages}/>
-                <MailMessagePanel />
+                <h3 className="client-head">Awesome Mail Client</h3>
+                <div className="mail-client-wrapper clearfix">
+                    <MailNavigationPanel emails={this.props.emailMessages}/>
+                    <MailMessagePanel />
+                </div>
             </div>
         )
     }

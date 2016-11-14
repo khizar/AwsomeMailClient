@@ -1,7 +1,7 @@
 import { it, describe } from 'mocha';
 import { expect } from 'chai';
 import MailClientReducer from '../../src/reducers/MailClientReducer';
-import { globalClick, fetchEmails, selectEmail } from '../../src/actions/MailClientActions';
+import { globalClick, fetchEmails, selectEmail, deleteEmail } from '../../src/actions/MailClientActions';
 import { fromJS } from 'immutable';
 
 
@@ -43,4 +43,23 @@ describe('MailClientReducer', () => {
         const nextState = MailClientReducer(initialState,selectEmail(email));
         expect(nextState.get('selectedEmail')).to.equal(email);
     });
+
+    it('should delete the email on delete email action', () => {
+        const emails =[{
+            uid: "id",
+            sender: 'sender',
+            subject: 'subject'
+        },{
+            uid: "id2",
+            sender: 'sender2',
+            subject: 'subject2'
+        }];
+
+        const middleState = MailClientReducer(initialState, fetchEmails(emails));
+
+        const nextState = MailClientReducer(middleState, deleteEmail('id'));
+
+        expect(nextState.get('emails').length).to.equal(1);
+    });
+
 });

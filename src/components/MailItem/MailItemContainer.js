@@ -1,11 +1,14 @@
 import { connect } from 'react-redux';
 import MailItem from './MailItem';
-import { selectEmail } from '../../actions/MailClientActions';
+import { selectEmail, deleteEmail } from '../../actions/MailClientActions';
 
 
 const mapDispatchToProps = (dispatch) => ({
     setSelectedEmail: (email) => {
         dispatch(selectEmail(email))
+    },
+    deleteEmail: (emailId) => {
+        dispatch(deleteEmail(emailId));
     }
 });
 

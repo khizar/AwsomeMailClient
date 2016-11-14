@@ -1,9 +1,62 @@
-.redBg {
-    background-color: red;
-    border-radius: 5px;
-    color: white;
-    padding: 5px;
+.client-head {
+    text-align: center;
 }
-.unread {
-    font-weight: bold;
+.awesome-email-client {
+    margin-top: 5em;
+}
+
+.mail-client-wrapper {
+    border: 1px solid #ccc;
+    height: 560px;
+
+    .navigation-panel {
+        height: 100%;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 -1em;
+
+            li {
+                padding: 0.5em;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(228, 239, 249, 0.42);
+                }
+
+                .unread {
+                    font-weight: bold;
+                }
+
+            }
+        }
+    }
+    .message-panel {
+        height: 100%;
+
+        .message-container {
+
+            .email-text {
+                padding-top: 80%;
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+
+                span {
+                    padding: 0.5em 0;
+                    display: inline-block;
+                }
+
+                .center-text {
+                    text-align: center;
+                    display: inherit;
+                }
+            }
+        }
+    }
 }

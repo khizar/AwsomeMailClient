@@ -1,6 +1,9 @@
 import { it, describe } from 'mocha';
 import { expect } from 'chai';
-import { GLOBAL_CLICK_EVENT, globalClick, FETCH_EMAILS, fetchEmails, SELECT_EMAIL, selectEmail } from '../../src/actions/MailClientActions';
+import {
+    GLOBAL_CLICK_EVENT, globalClick, FETCH_EMAILS, fetchEmails, SELECT_EMAIL, selectEmail, DELETE_EMAIL, deleteEmail
+}
+    from '../../src/actions/MailClientActions';
 
 describe('MailClientActions', () => {
 
@@ -16,7 +19,7 @@ describe('MailClientActions', () => {
         const emails = [{
             sender: 'one',
             message: 'message'
-        },{
+        }, {
             sender: 'two',
             message: 'message'
         }];
@@ -42,6 +45,17 @@ describe('MailClientActions', () => {
         };
 
         expect(selectEmail(email)).to.deep.equal(expectedAction);
+    });
+
+    it('should create a DELETE_EMAIL action', () => {
+        const emailId = "id";
+
+        const expectedAction = {
+            type: DELETE_EMAIL,
+            emailId
+        };
+
+        expect(deleteEmail(emailId)).to.deep.equal(expectedAction);
     })
 
 });

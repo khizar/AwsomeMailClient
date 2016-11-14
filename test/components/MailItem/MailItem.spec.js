@@ -2,7 +2,6 @@ import React from 'react';
 import { it, describe, beforeEach } from 'mocha';
 import { expect, have } from 'chai';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 import MailItem from '../../../src/components/MailItem/MailItem';
 
 describe('MailItem', () => {
@@ -41,7 +40,7 @@ describe('MailItem', () => {
     });
 
     it('should have a button to delete message', () => {
-        expect(mailItem.find('a.del-mail')).to.have.length(1);
+        expect(mailItem.find('button.del-mail')).to.have.length(1);
     });
 
     it('should have a read/unread status which works', () => {

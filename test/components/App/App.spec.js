@@ -30,15 +30,6 @@ describe('App component', () => {
         expect(wrapper.hasClass('awesome-email-client')).to.equal(true);
     });
 
-    it('should have the first three correct children', () => {
-        let firstChild = wrapper.childAt(0);
-        let secondChild = wrapper.childAt(1);
-        let thirdChild = wrapper.childAt(2);
-
-        expect(firstChild.type()).to.equal('h1');
-        expect(secondChild.type()).to.equal('p');
-        expect(thirdChild.type()).to.equal('p');
-    });
 
     it("should call the correct callback on Click", () => {
         const spy = sinon.spy();

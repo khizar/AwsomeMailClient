@@ -2,7 +2,7 @@ import React from 'react';
 import MailItemsList from '../MailItemList/MailItemList';
 
 const MailNavigationPanel = (props) => (
-    <div className="navigation-panel">
+    <div className="navigation-panel col-md-4">
         <MailItemsList mailItemsList={props.emails}/>
     </div>
 );
